@@ -17,7 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         info.cpp \
         main.cpp \
-        observe.cpp
+        observe.cpp \
+        observeobject.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -26,4 +27,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     info.h \
-    observe.h
+    observe.h \
+    observeobject.h
+
+DISTFILES += \
+    filename.txt
