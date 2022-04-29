@@ -1,8 +1,20 @@
-#include <QCoreApplication>
+#include <iostream>
+#include "observeobject.h"
+#include "observe.h"
+#include <chrono>
+#include <thread>
 
-int main(int argc, char *argv[])
+using namespace std;
+
+int main()
 {
-    QCoreApplication a(argc, argv);
+    FileMonitor monitor("filename.txt");
+    FileObserver observer;
+    monitor.Attach(&observer);
 
-    return a.exec();
+    while (true){
+        monitor.checkFile();
+        this_thread::sleep_for(chrono::milliseconds(2000));
+    }
+    return 0;
 }
