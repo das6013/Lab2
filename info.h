@@ -6,7 +6,7 @@ class Info
 {
 public:
     QString name;
-    long size;
+    float size;
     bool existence;
     Info(QString fileName);
 };

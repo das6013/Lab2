@@ -8,13 +8,8 @@ using namespace std;
 
 int main()
 {
-    FileMonitor monitor("filename.txt");
-    FileObserver observer;
-    monitor.Attach(&observer);
-
-    while (true){
-        monitor.checkFile();
-        this_thread::sleep_for(chrono::milliseconds(2000));
-    }
-    return 0;
+   Info tes("C:/Users/andru/Documents/Lab2/filename.qwetxt");
+   cout<<tes.existence<<endl;
+   cout<<tes.name.toStdString()<<endl;
+   cout<<tes.size<<endl;
 }
