@@ -14,12 +14,13 @@ public:
     void Detach(FileObserver *observer);
     void Notify(bool existence, long size);
 };
-class FileMonitor: public ObserveObject {
+class FileMonitor: public ObserveObject
+{
 private:
     Info prevFileState;
 public:
     FileMonitor(QString _name);
-    void checkFile();
+    void CheckFile();
     void Change(bool existence, long size);
 };
 #endif // OBSERVEOBJECT_H

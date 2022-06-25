@@ -8,7 +8,12 @@ using namespace std;
 
 int main()
 {
-   Info tes("C:/Users/andru/Documents/Lab2/filename.txt");
+   FileMonitor tets("C:/Users/andru/Documents/Lab2/filename.tqxt");
    FileObserver observer;
-   observer.Update(tes.existence,tes.size);
+   tets.Attach(&observer);
+   while (true)
+   {
+       tets.CheckFile();
+       this_thread::sleep_for(chrono::milliseconds(1000));
+    }
 }
