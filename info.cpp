@@ -17,6 +17,5 @@ Info::Info(QString fileName)
    {
        existence=false;
        size=0;
-
     }
 }
