@@ -2,18 +2,18 @@
 #define OBSERVE_H
 
 
-class Observe
+class Observe//interface observe
 {
 public:
-    virtual void Update(bool existence, long size) = 0;
+    virtual void Update(bool existence, long size) = 0;//exstiine -check existence size-size
 };
 
-class FileObserver: Observe
+class FileObserver: Observe //concret class realize observe
 {
 private:
-    long lastSize = -1;
+    long lastSize = -1;//last size element
 public:
-    void Update(bool existence, long size);
+    void Update(bool existence, long size);//check data file and update it
 };
 
 #endif // OBSERVE_H
