@@ -1,17 +1,17 @@
 #include "info.h"
 #include <iostream>
 using namespace std;
-Info::Info(QString fileName)
+Info::Info(QString fileName)// consructor to QString
 {
-    name = fileName;
-    struct stat buff;
-    FILE *file;
+    name = fileName;//name file
+    struct stat buff;//struct get data file
+    FILE *file;//file
     file=fopen(fileName.toStdString().c_str(),"r");
-   if (file)
+   if (file)//check exstinece
     {
        existence=true;
-       stat(fileName.toStdString().c_str(), &buff);
-       size = buff.st_size;
+       stat(fileName.toStdString().c_str(), &buff);//get data
+       size = buff.st_size;//size file
    }
    else
    {
