@@ -5,10 +5,10 @@
 class Info
 {
 public:
-    QString name;
-    long size;
-    bool existence;
-    Info(QString fileName);
+    QString name;// name file
+    long size;// size file
+    bool existence;// chech exestence file
+    Info(QString fileName);//constructor to Qstring
 };
 
 #endif // INFO_H
