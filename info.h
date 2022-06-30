@@ -5,10 +5,10 @@
 class Info
 {
 public:
-    QString name;
-    float size;
-    bool existence;
-    Info(QString fileName);
+    QString name;//name file
+    float size;//size file 
+    bool existence;//check existence
+    Info(QString fileName);//consructor to QSTRIng
 };
 
 #endif // INFO_H
