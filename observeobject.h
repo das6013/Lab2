@@ -8,19 +8,19 @@ using namespace  std;
 class ObserveObject
 {
 private:
-    vector<FileObserver*> subscribers;
+    vector<FileObserver*> subscribers;//list sub
 public:
-    void Attach(FileObserver *observer);
-    void Detach(FileObserver *observer);
-    void Notify(bool existence, long size);
+    void Attach(FileObserver *observer);//add sub
+    void Detach(FileObserver *observer);//delete sub
+    void Notify(bool existence, long size);//update date sub and iter
 };
 class FileMonitor: public ObserveObject
 {
 private:
     Info prevFileState;
 public:
-    FileMonitor(QString _name);
-    void CheckFile();
-    void Change(bool existence, long size);
+    FileMonitor(QString _name);//constructor to FileMonitor
+    void CheckFile();//Chek change file
+    void Change(bool existence, long size);// change data 
 };
 #endif // OBSERVEOBJECT_H
